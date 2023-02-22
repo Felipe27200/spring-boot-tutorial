@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Es de top-level element en todos los Maven pom.xml -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- 
+		Es la version del Object Model del POM que se está usando.
+		
+		Es obligatorio y aunque cambia con frequencia, es necesario
+		para ofrecer estabilidad o para cuando el develover considere
+		necesario cambiar el model.
+	-->
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<!-- 
+			Es el nombre del grupo u organizacion a la que pertenece la dependencia.
+			
+			Es un identificador único que se compone por lo general del completamente
+			cualificado nombre del dominio de la organizacion.
+		-->
+		<groupId>org.springframework.boot</groupId>
+		
+		<!-- 
+			The library that is required.
+			Es como se conoce por lo general el proyecto.
+			
+			Generalmente es un JAR file.
+		-->
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<!-- 
+			Es la version del Artifact generado por el proyecto.			
+		-->
+		<version>3.0.2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	
+	<groupId>com.example</groupId>
+	<artifactId>spring-boot-tutorial</artifactId>
+	<!-- 
+		El SNAPSHOT indica que es la version de desarrollo
+		antes del último release de la version, es decir,
+		el SNAPSHOT es mas viejo que su release.
+	-->
+	<version>0.0.1-SNAPSHOT</version>
+	
+	<!--
+		Es el nombre utilizado para mostrar el proyecto.
+	-->
+	<name>spring-boot-tutorial</name>
+	<description>Demo project for Spring Boot</description>
+	<!-- 
+		Contiene value placeholder accesibles en cualquier
+		parte dentro del POM.
+	-->
+	<properties>
+		<java.version>17</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<!-- 
+		Este elemento maneja cosas como la declaracion
+		de la estructura del directorio del proyecto y
+		la gestion de plugins.
+	-->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
