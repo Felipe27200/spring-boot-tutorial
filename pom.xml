@@ -65,11 +65,15 @@
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
+		<!-- Aniadir Thymeleaf a las dependencias -->
+	    <dependency>
+      		<groupId>org.springframework.boot</groupId>
+      		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+    	</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -79,13 +83,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		
-		<!-- Aniadir Thymeleaf a las dependencias -->
-	    <dependency>
-      		<groupId>org.springframework.boot</groupId>
-      		<artifactId>spring-boot-starter-thymeleaf</artifactId>
-    	</dependency>
+		</dependency>		
 	</dependencies>
 
 	<!-- 
